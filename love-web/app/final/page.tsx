@@ -9,10 +9,6 @@ import Heart, { HeartBurst } from "@/components/Heart";
 
 export default function FinalPage() {
   const [step, setStep] = useState<"idle" | "ask" | "yes">("idle");
-  const [noPos, setNoPos] = useState({ x: 0, y: 0 });
-
-  // ปุ่ม "ไม่" จะหนีเมาส์ 😆
-  const dodge = () => setNoPos({ x: Math.random() * 200 - 100, y: Math.random() * 120 - 60 });
 
   return (
     <section className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden px-4 text-center">
@@ -70,14 +66,6 @@ export default function FinalPage() {
                   <button onClick={() => setStep("yes")} className="btn-gold">
                     {finale.yes}
                   </button>
-                  <motion.button
-                    animate={noPos}
-                    onMouseEnter={dodge}
-                    onClick={dodge}
-                    className="rounded-lg px-5 py-2 text-sm text-white/50"
-                  >
-                    {finale.no}
-                  </motion.button>
                 </div>
               </motion.div>
             )}
