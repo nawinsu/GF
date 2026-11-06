@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: #0b0716;
+  color: #efe7ff;
+  font-family: var(--font-prompt), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100dvh;
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(91, 52, 160, 0.35), transparent 55%),
+    radial-gradient(ellipse at 90% 100%, rgba(170, 70, 140, 0.18), transparent 55%),
+    #0b0716;
+  background-attachment: fixed;
+}
+
+::selection {
+  background: rgba(247, 198, 107, 0.35);
+}
+
+@layer components {
+  .glass {
+    @apply rounded-2xl border border-white/10 bg-night-800/60 backdrop-blur-md;
+  }
+  .btn-gold {
+    @apply inline-flex items-center gap-2 rounded-lg bg-gradient-to-b from-gold-300 to-gold-500 px-6 py-2.5 font-medium text-night-950 shadow-glow transition hover:brightness-110 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-outline {
+    @apply inline-flex items-center gap-2 rounded-lg border border-gold-400/70 px-6 py-2.5 text-gold-300 transition hover:bg-gold-400/10 active:scale-95;
+  }
+  .heading-script {
+    @apply font-script font-medium tracking-tight text-gold-300 drop-shadow-[0_0_14px_rgba(247,198,107,0.35)];
+  }
+  .polaroid {
+    @apply rounded-sm bg-[#f7eef3] p-2 pb-8 shadow-card;
+  }
+}
