@@ -3,6 +3,7 @@ import { Charmonman, Playfair_Display, Prompt } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import StarField from "@/components/StarField";
+import AudioProvider from "@/components/AudioProvider";
 import { site } from "@/lib/content";
 
 // ฟอนต์ถูกดาวน์โหลดมาเก็บในเว็บตอน build
@@ -44,8 +45,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="th" className={`${prompt.variable} ${display.variable} ${charm.variable}`}>
       <body>
         <StarField />
-        <Navbar />
-        <main className="relative z-10">{children}</main>
+        <AudioProvider>
+          <Navbar />
+          <main className="relative z-10">{children}</main>
+        </AudioProvider>
       </body>
     </html>
   );

@@ -68,7 +68,6 @@ export default function LandingPage() {
         <span className="flex h-8 w-5 justify-center rounded-full border border-white/40 pt-1.5">
           <span className="h-1.5 w-1 rounded-full bg-white/60" />
         </span>
-        Scroll Down
       </motion.div>
     </section>
   );

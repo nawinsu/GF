@@ -4,16 +4,16 @@
 // ============================================================
 
 export const site = {
-  title: "I made this for you 💜",
-  description: "เว็บเล็กๆ ที่ทำให้เธอคนเดียว",
+  title: "ฮันเเน่แปลกใจล่ะสิ้ที่เขาทำให้ มุฮ่าๆ",
+  description: "คิดว่าจะสองปีเเล้วยังไม่มีไรให้เธอเลย เลยทำเว็ปนี้มาให้..",
   herName: "เธอ",
-  ourSince: "2025-03-15", // วันที่เป็นแฟนกัน (ใช้นับวันที่หน้าแรก)
+  ourSince: "2024-11-24", // วันที่เป็นแฟนกัน (ใช้นับวันที่หน้าแรก)
 };
 
 // ---------- 1. Landing ----------
 export const landing = {
-  headline: ["I made", "this for you."],
-  sub: ["บางอย่างที่อยากให้เธอเห็น...", "และอยากให้เธอรู้ว่าเธอสำคัญแค่ไหน"],
+  headline: ["ฮันเเน่แปลกใจล่ะสิ้ที่เขาทำให้ มุฮ่าๆ"],
+  sub: ["คิดว่าจะสองปีเเล้วยังไม่มีไรให้เธอเลย เลยทำเว็ปนี้มาให้.."],
   cta: "เริ่มดูเลย",
   image: "/photos/couple.jpg",
 };
@@ -30,70 +30,31 @@ export type StoryItem = {
 
 export const story: StoryItem[] = [
   {
-    date: "14 กุมภาพันธ์ 2025",
-    title: "วันแรกที่ได้เจอกัน",
-    text: "วันธรรมดาๆ ที่กลายเป็นวันที่ไม่ธรรมดาที่สุด",
-    photo: "/photos/him.jpg",
-    caption: "first time",
+    date: " 17-19 พฤศจิกายน 2024",
+    title: "วันแรกที่เราได้ลองคุยกัน",
+    text: "จำได้ว่าช่วงนั้นเขาติดเกมมากชนิดที่ว่าไม่มีความคิดว่าอยากมีแฟนเลย",
+    photo: "/photos/ft.jpg",
+    caption: "คิดว่ามันไม่ระบุตัวตนเลยถามเธอไปว่าใคร",
   },
   {
-    date: "20 กุมภาพันธ์ 2025",
-    title: "เริ่มคุยกัน",
-    text: "ไม่รู้เลยว่าแค่ข้อความเล็กๆ จะกลายเป็นเรื่องใหญ่",
-    photo: "/photos/her.jpg",
-    caption: "hello you",
+    date: "24 กุมภาพันธ์ 2024",
+    title: "วันนั้นเราส่งเพลงจีบกัน สุดท้ายจบลงที่เราตกลงเป็นแฟนกันเฉย",
+    text: "ก่อนที่จะบอกว่าเปิดตัวเลยมั้ย เคยคิดยุนะว่าถ้าสมมุตว่าเราคบกันแปปเดียวมันจะเสียเวลามั้ย เเต่สุดท้ายก็ตัดสินใจว่าตั้งใจเป็นแฟนที่ดีของใครซักคนให้ได้ก็พอ",
+    photo: "/photos/kob.jpg",
+    caption: "24 กุมภาพันธ์ 2024 รักแฟน",
   },
   {
-    date: "15 มีนาคม 2025",
-    title: "เป็นแฟนกัน",
-    text: "วันที่ได้ยินคำว่า 'ตกลง' แล้วยิ้มทั้งคืน",
-    photo: "/photos/couple.jpg",
-    caption: "together",
+    date: "ทุกวันในโรงเรียน",
+    title: "เราแทบจะนั่งกินข้าวด้วนกันตลอดเลยนะ",
+    text: "หลังคบกันจำได้ว่าเขาทิ้งเพื่อนทิ้งฝูงไปนั่งกินข้าวกับแฟนอย่างเดียวเลย555",
+    photo: "/photos/eat.jpg",
+    caption: "ละพากันกินเเต่ก๋วยเตี๋ยว55",
   },
-  // ---------- ช่วงรายเดือน (นับจาก 15 มี.ค. 2025) ----------
-  {
-    date: "15 เมษายน 2025",
-    title: "ครบ 1 เดือน",
-    text: "เดือนแรกผ่านไปไวมาก แต่ทุกวันมีเธออยู่ด้วยเสมอ",
-    photo: "/photos/month-1.jpg",
-    caption: "1 month",
-    focus: "50% 75%",
-  },
-  {
-    date: "15 พฤษภาคม 2025",
-    title: "ครบ 2 เดือน",
-    text: "ไปเที่ยวถ้ำนาคาด้วยกัน นั่งถ่ายรูปคู่ใต้ป้ายใหญ่ๆ",
-    photo: "/photos/month-2.jpg",
-    caption: "naka cave",
-  },
-  {
-    date: "15 มิถุนายน 2025",
-    title: "ครบ 3 เดือน",
-    text: "ส่งเพลง Birds of a Feather ให้กัน แล้วเธอก็ส่งสติกเกอร์กระต่ายกลับมา",
-    photo: "/photos/month-3.jpg",
-    caption: "our song",
-    focus: "50% 30%",
-  },
-  {
-    date: "15 กรกฎาคม 2025",
-    title: "ครบ 4 เดือน",
-    text: "มื้อกลางวันที่โรงอาหาร ธรรมดาๆ แต่เป็นช่วงเวลาที่ชอบ",
-    photo: "/photos/month-4.jpg",
-    caption: "lunch time",
-    focus: "50% 45%",
-  },
-  {
-    date: "15 สิงหาคม 2025",
-    title: "ครบ 5 เดือน",
-    text: "เดินเลือกของกับเธอ ยืนรอนานแค่ไหนก็ไม่เบื่อ",
-    photo: "/photos/month-5.jpg",
-    caption: "5 months",
-    focus: "50% 30%",
-  },
+
 ];
 
 // ---------- 3. Memories ----------
-export type MemoryCategory = "Trip" | "Food" | "Daily" | "Special";
+export type MemoryCategory = "Trip" | "shop" | "Daily" | "Special";
 
 export type Memory = {
   src: string;
@@ -102,32 +63,32 @@ export type Memory = {
   category: MemoryCategory;
 };
 
-export const memoryCategories: MemoryCategory[] = ["Trip", "Food", "Daily", "Special"];
+export const memoryCategories: MemoryCategory[] = ["Trip", "shop", "Daily", "Special"];
 
 export const memories: Memory[] = [
   {
-    src: "/photos/couple.jpg",
-    date: "14 ก.พ. 2025",
-    text: "วันที่ธรรมดาๆ ที่ตอนนั้นยังไม่รู้เลยว่าจะกลายเป็นหนึ่งในความทรงจำที่สำคัญที่สุด",
+    src: "/photos/trip.jpg",
+    date: "15 เมษายน 2025",
+    text: "หลังจากไปเเห่นางสงกรานต์ก็พาเธอมาเที่ยวด้วยกันครั้งเเรก วันนั้นสนุกมากกก",
     category: "Special",
   },
   {
-    src: "/photos/together.jpg",
-    date: "1 มี.ค. 2025",
-    text: "พระอาทิตย์ตกวันนั้นสวย แต่คนข้างๆ สวยกว่า",
+    src: "/photos/trip.jpg",
+    date: "15 เมษายน 2025",
+    text: "หลังจากไปเเห่นางสงกรานต์ก็พาเธอมาเที่ยวด้วยกันครั้งเเรก วันนั้นสนุกมากกก",
     category: "Trip",
   },
   {
-    src: "/photos/her.jpg",
-    date: "8 มี.ค. 2025",
-    text: "รอยยิ้มนี้แหละที่ทำให้วันแย่ๆ กลายเป็นวันดี",
+    src: "/photos/food.jpg",
+    date: "เเทบทุกวันที่อยู่ด้วยกัน",
+    text: "มีไรให้เราทำกินตลอดทั้งย่างกุ้ง สุกี้ เเทบจะเป็นพ่อครัวประจำบ้านแฟนละ55",
     category: "Daily",
   },
   {
-    src: "/photos/him.jpg",
-    date: "22 มี.ค. 2025",
-    text: "หน้าตาตอนรอเธอเลือกร้านข้าว (นานมาก)",
-    category: "Food",
+    src: "/photos/shop.jpg",
+    date: "เกือบทุกวันที่เราอยู่ด้วยกัน",
+    text: "เป็นช่วงนี้ใช้ตังเยอะมากกก เพราะทิั้งกินหมูทะ ซื้อของให้แมว55 เเต่ก็สนุกมาก",
+    category: "shop",
   },
 ];
 
@@ -145,44 +106,43 @@ export const thingsILove: { icon: LoveIcon; title: string; sub: string }[] = [
 
 // ---------- 5. Our Song ----------
 export const song = {
-  title: "Better Together",
-  artist: "Daniel Caesar",
+  title: "BIRDS OF A FEATHER",
+  artist: "Billie Eilish",
   // วางไฟล์เพลงที่ public/music/our-song.mp3 (ไม่มีไฟล์ก็ยังเปิดหน้าได้)
-  src: "/music/our-song.mp3",
-  cover: "/photos/together.jpg",
-  note: "ขอบคุณที่อยู่ในทุกช่วงของชีวิตนะ ♡",
+  src: "/music/Billie Eilish - BIRDS OF A FEATHER (Official Music Video).mp3",
+  cover: "/photos/song.jpg",
+  note: "เป็นเพลงที่รู้สึกว่าไม่รู้จะอธิบายยังไงเเค่ฟังเเล้วมันนึกถึงเธอ",
 };
 
 // ---------- 6. Message ----------
 export const letter = {
-  heading: "Before you leave...",
-  prompt: "มีอะไรบางอย่างที่อยากบอกกันไหม? ♡",
-  placeholder: "อยากบอกอะไรกับเราก็เขียนตรงนี้ได้...",
-  button: "ส่งข้อความถึงเรา",
+  heading: "เราคบกันมาจะสองปีเเล้วรู้สึกว่ามีอะไรอยากจะบอกมั้ย",
+  prompt: "อย่าลืมเช็คข้อความให้ถูกต้องนะ",
+  placeholder: "อยากบอกอะไรกับเราก็เขียนตรงนี้ได้เลยข้อความจะส่งมาหาเขาเอง",
+  button: "ส่งข้อความ",
   successTitle: "ข้อความถูกส่งแล้ว!",
-  successSub: "จะเก็บข้อความนี้ไว้อย่างดีเลย ♡",
+  successSub: "ขอบคุณนะแฟน",
   maxLength: 500,
 };
 
 // ---------- 7. Final ----------
 export const finale = {
-  pre: "And if I had to choose again...",
-  main: "I would still choose you.",
-  button: "หนึ่งคำถาม...",
-  question: "อยู่ด้วยกันไปนานๆ แบบนี้นะ?",
-  yes: "ได้สิ ♡",
-  no: "ไม่",
-  afterYes: "รักเธอนะ ♡ Happy 1st Anniversary",
-  footer: ["ขอบคุณที่เข้ามาในชีวิตกันนะ", "และขอให้เรามีความสุขแบบนี้ไปด้วยกันนานๆ"],
-  signature: "Forever & Always ♡",
+  pre: "หน้าสุดท้ายเเล้ว",
+  main: "ก่อนจะออกเว็ปนี้ไป",
+  button: "ขอถามคำถามแฟนซักคำถามได้มั้ย??",
+  question: "ตลอดเวลาที่คบกันมาเขาเป็นเแฟนที่ดีของเธอมั้ย",
+  yes: "ต่อไป",
+
+  afterYes: "ขอบคุณนะที่อยู่ต้วยกันจนถึงตอนนี้",
+  footer: ["ขอบคุณที่เข้ามาในชีวิตกันนะ", "และขอให้เรามีความสุขแบบนี้ไปด้วยกันนานๆ--"],
+  signature: "ถึง ชมภูนุช คิดคำนวล"
 };
 
 // ลำดับหน้าตาม Flow ของเว็บ (ใช้กับปุ่ม "ต่อไป" และเมนู)
 export const flow = [
   { href: "/", label: "Home" },
-  { href: "/story", label: "Our Story" },
+  { href: "/story", label: "Before we became a couple" },
   { href: "/memories", label: "Memories" },
-  { href: "/love", label: "For You" },
   { href: "/song", label: "Music" },
   { href: "/letter", label: "Message" },
   { href: "/final", label: "Final" },

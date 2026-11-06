@@ -105,7 +105,7 @@ export default function Letter() {
                 <rect x="3" y="5" width="18" height="14" rx="2" />
                 <path d="M3 7l9 6 9-6" />
               </svg>
-              <p className="mt-3 text-sm">ข้อความจะส่งตรงถึงเรา ♡</p>
+              <p className="mt-3 text-sm">เขารักแฟนนะ *-*</p>
             </motion.div>
           )}
         </AnimatePresence>

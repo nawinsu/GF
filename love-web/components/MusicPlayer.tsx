@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Heart from "./Heart";
+import { useAudio } from "./AudioProvider";
 
 type Props = { title: string; artist: string; src: string; cover: string };
 
@@ -12,60 +13,17 @@ const fmt = (s: number) =>
 
 const BARS = Array.from({ length: 56 }, (_, i) => 0.25 + 0.75 * Math.abs(Math.sin(i * 1.7) * Math.cos(i * 0.45)));
 
-export default function MusicPlayer({ title, artist, src, cover }: Props) {
-  const audio = useRef<HTMLAudioElement>(null);
-  const [playing, setPlaying] = useState(false);
-  const [time, setTime] = useState(0);
-  const [duration, setDuration] = useState(0);
-  const [missing, setMissing] = useState(false);
+// ตัวเล่นเพลงจริงอยู่ใน AudioProvider (app/layout.tsx) เพลงเลยเล่นต่อตอนเปลี่ยนหน้า
+// ไฟล์เพลงกำหนดที่ song.src ใน lib/content.ts
+export default function MusicPlayer({ title, artist, cover }: Props) {
+  const { playing, time, duration, missing, toggle, seek: seekTo, skip } = useAudio();
   const [liked, setLiked] = useState(true);
 
-  useEffect(() => {
-    const a = audio.current;
-    if (!a) return;
-    const onTime = () => setTime(a.currentTime);
-    const onMeta = () => setDuration(a.duration);
-    const onEnd = () => setPlaying(false);
-    const onErr = () => setMissing(true);
-    a.addEventListener("timeupdate", onTime);
-    a.addEventListener("loadedmetadata", onMeta);
-    a.addEventListener("ended", onEnd);
-    a.addEventListener("error", onErr);
-    return () => {
-      a.removeEventListener("timeupdate", onTime);
-      a.removeEventListener("loadedmetadata", onMeta);
-      a.removeEventListener("ended", onEnd);
-      a.removeEventListener("error", onErr);
-    };
-  }, []);
-
-  const toggle = async () => {
-    const a = audio.current;
-    if (!a || missing) return;
-    if (playing) {
-      a.pause();
-      setPlaying(false);
-    } else {
-      try {
-        await a.play();
-        setPlaying(true);
-      } catch {
-        setMissing(true);
-      }
-    }
-  };
-
-  const seek = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (audio.current) audio.current.currentTime = Number(e.target.value);
-  };
-  const skip = (d: number) => {
-    if (audio.current) audio.current.currentTime = Math.max(0, audio.current.currentTime + d);
-  };
+  const seek = (e: React.ChangeEvent<HTMLInputElement>) => seekTo(Number(e.target.value));
   const progress = duration ? time / duration : 0;
 
   return (
     <div className="mx-auto max-w-xl">
-      <audio ref={audio} src={src} preload="metadata" />
 
       <div className="relative">
         {/* แผ่นเสียง */}
